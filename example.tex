@@ -24,21 +24,22 @@
 \section{教育背景}
 \dateditem{\textbf{华中科技大学} \quad 土木工程 \quad 本科}{2019年 -- 2020年}
 \dateditem{\textbf{华中科技大学} \quad 软件工程 \quad 本科}{2020年 -- 在读}
-成绩：年级前15\% \quad 英语：CET6
+成绩：年级前15\%(13\83) \quad 英语：CET6
 
 
 % ----------------------------------------------------------------------------- %
 
 \section{专业技能}
 \smallskip
-C/C++、Python、Java、算法与数据结构、Linux、Spark、pytorch、tensorflow、集群优化
+C/C++、Python、Java、算法与数据结构、Linux、Spark、pytorch、tensorflow、集群分布式训练
 
 
 % ----------------------------------------------------------------------------- %
 
 \section{获奖情况}
-\datedaward{三等奖}{手机应用开发大赛} {2021年12月}
+\datedaward{\small{二等奖}}{ASC2022}{2022年3月}
 \datedaward{\small{二等奖}}{数学竞赛}{2021年11月}
+\datedaward{三等奖}{手机应用开发大赛} {2021年12月}
 \datedaward{三等奖}{蓝桥杯编程挑战赛} {2021年04月}
 \medskip
 
@@ -48,40 +49,39 @@ C/C++、Python、Java、算法与数据结构、Linux、Spark、pytorch、tensor
 
 
 % ---
-\datedproject{超算ASC2022项目}{竞赛项目}{2022年01月 -- 持续}
-\textit{大语言模型，集群性能优化、并行计算}
+\datedproject{超算ASC2022项目}{竞赛项目}{2022年01月 -- 2022年03月}
+\textit{大语言模型，集群性能优化、并行计算训练}
 \vspace{0.4ex}
 
-优化大语言模型在多机多卡集群环境的训练速度
+优化大语言模型在多机多卡集群环境的训练速度，使用不同的加速训练和收敛策略
 \begin{itemize}
-  \item 计算节点内部使用OpenMP张量并行化
-  \item 计算节点间使用MPI流水线并行化
-  \item 单机优化性能达2x, 多机接近线性加速比，4.7B大语言模型半小时收敛
+  \item 组合不同的并行策略，收敛策略，并行框架使收敛时间和训练时间尽可能短
+  \item 去除MASK依赖
+  \item 8 V100卡 4.7B GPT2大语言模型半小时左右收敛
 \end{itemize}
-
 % ---
-\datedproject{多目标追踪项目}{学长合作}{2021年09月 -- 持续}
+\datedproject{单目标追踪项目}{科研项目}{2021年03月 -- 2022年04月}
+\textit{pytorch、单目标跟踪，MM2022在投}
+\vspace{0.4ex}
+在stark基础上提出了使用高质量模板库中出现过的的相似模板提升跟踪器在当前帧的目标跟踪能力，可以很好的提高跟踪器在目标外观剧烈形变场景下的跟踪能力，增加了对齐，模板验证等结构，在TrackingNet上的测试结果仅次于MixFormer
+% ---
+\datedproject{多目标追踪项目}{科研项目}{2021年09月 -- 2022年03月}
 \textit{pytorch、多目标追踪及其攻防}
 \vspace{0.4ex}
 
-针对FairMOT,ByteTracker 做对抗样本训练增强追踪器的鲁棒性，改进其后处理方法提高多运动场景的追踪精度
+针对FairMOT,ByteTracker 做对抗样本训练增强追踪器的鲁棒性，改进其后处理方法以提高多目标运动场景的追踪精度和防御能力，防御能力和运行场景下的追踪效果均有提升
 % ---
-\datedproject{风格变换相机}{个人项目}{2021年10月 -- 2021年12月}
+\datedproject{风格变换相机}{竞赛项目}{2021年10月 -- 2021年12月}
 \textit{Android、pytorch,图像风格动漫画转换，ncnn部署}
 \vspace{0.4ex}
 
 安卓写了一个风格变化相册，可以分享，保存，展示，使用pytorch 转onnx 转 ncnn部署在安卓端
 \begin{itemize}
   \item 端到端使用简单
-  \item ncnn加速部署在手机上转换速度较快
-  \item 网络参数较少，加速减少功耗
-  \item 同时提供网络matting去除背景抠图方便添加背景，转换等二次处理
+  \item ncnn加速部署在手机上提高响应速度
+  \item onnx算子优化压缩网络参数，减少功耗
+  \item 同时集成matting网络去除背景抠图方便添加背景，转换等二次处理
 \end{itemize}
-\datedproject{法研杯}{应法学院邀请}{2021年9月 -- 2021年12月}
-\textit{pytorch,法律刑期预测，nlp}
-\vspace{0.4ex}
-
-使用nlp通用模型 bert+fcn 采用QA阅读理解语言模型,改进设计并训练,封测取得Rank9的成绩
 % ----------------------------------------------------------------------------- %
 
 \section{课外}
