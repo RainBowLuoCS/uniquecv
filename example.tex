@@ -30,15 +30,16 @@
 
 \section{专业技能}
 \smallskip
-C/C++、Python、Java、算法与数据结构、Linux、Spark、pytorch、tensorflow、集群分布式训练
+C/C++、Python、Java、算法与数据结构、Linux、Ray、Pytorch、Tensorflow、集群并行训练
 
 
 % ----------------------------------------------------------------------------- %
 
 \section{获奖情况}
 \datedaward{二等奖}{\textbf{ASC2022}}{2022年3月}
-\datedaward{二等奖}{数学竞赛}{2021年11月}
+\datedaward{\small{二等奖}}{数学竞赛}{2021年11月}
 \datedaward{\small{三等奖}}{手机应用开发大赛} {2021年12月}
+\datedaward{\small{H奖}}{手机应用开发大赛} {2022年5月}
 \medskip
 
 % ----------------------------------------------------------------------------- %
@@ -52,20 +53,20 @@ C/C++、Python、Java、算法与数据结构、Linux、Spark、pytorch、tensor
 
 优化大语言模型在多机多卡集群环境的训练速度，使用不同的加速训练和收敛策略
 \begin{itemize}
-  \item 组合不同的并行策略，收敛策略，并行框架使收敛时间和训练时间尽可能短，8 V100卡 4.7B GPT2大语言模型半小时左右收敛
+  \item 组合不同的并行策略(DP,PP,TP,ZERO)，收敛策略(Curriculum Learning,Post Norm,Warm Up)，并行框架使收敛时间和训练时间尽可能短，8 V100卡 4.7B GPT2大语言模型半小时左右收敛
 \end{itemize}
 % ---
 \datedproject{单目标追踪项目}{科研项目}{2022年03月 -- 2022年05月}
 \textit{pytorch、单目标跟踪，\textbf{MM2022在投}}
 \vspace{0.4ex}
 
-在stark基础上提出了使用高质量模板库中出现过的的相似模板提升跟踪器在当前帧的目标跟踪能力，可以很好的提高跟踪器在目标外观剧烈形变场景下的跟踪能力，增加了对齐，模板验证等结构，\textbf{在TrackingNet上的测试排行榜结果仅次于MixFormer}
+在stark(ResNet+Transformer)基础上提出了使用高质量模板库中出现过的的相似模板(K-means)更新目标模板提升跟踪器在当前帧的目标跟踪能力，可以很好的提高跟踪器在目标外观剧烈形变场景下的跟踪能力，增加了掩码(MASK)，模板验证(TAB)等结构，\textbf{在TrackingNet上的测试排行榜结果仅次于MixFormer}(MM->AAAI)
 % ---
 \datedproject{多目标追踪项目}{科研项目}{2021年09月 -- 2022年03月}
 \textit{pytorch、多目标追踪及其攻防}
 \vspace{0.4ex}
 
-针对FairMOT,ByteTracker 做对抗样本训练增强追踪器的鲁棒性，改进其后处理方法以提高多目标运动场景的追踪精度和防御能力，防御能力和运行场景下的追踪效果均有提升
+针对FairMOT(CenterNet+kalman filter+KM),ByteTracker(YOLO+kalman filter+KM)做对抗样本训练(Adversarial Training)增强追踪器的鲁棒性，改进其后处理方法以提高多目标运动场景的追踪精度和防御能力，防御能力和运行场景下的追踪效果均有提升
 % ---
 \datedproject{风格变换相机}{竞赛项目}{2021年10月 -- 2021年12月}
 \textit{Android、pytorch,图像风格动漫画转换，ncnn部署}
@@ -73,7 +74,7 @@ C/C++、Python、Java、算法与数据结构、Linux、Spark、pytorch、tensor
 
 android 写了一个风格变化相册，可以分享，保存，展示，使用pytorch 转onnx 转 ncnn部署在安卓端
 \begin{itemize}
-  \item onnx算子优化压缩网络参数，减少功耗,ncnn加速部署在手机上提高响应速度，同时集成matting网络去除背景抠图方便添加背景，转换等二次处理
+  \item onnx算子优化压缩网络参数，减少功耗,ncnn加速部署在手机上提高响应速度，同时集成matting网络去除背景抠图方便添加背景，转换等二次处理(GAN,BG Matting)
 \end{itemize}
 % ----------------------------------------------------------------------------- %
 \section{课外}
