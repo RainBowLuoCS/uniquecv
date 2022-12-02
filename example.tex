@@ -23,14 +23,14 @@
 \section{教育背景}
 \dateditem{\textbf{华中科技大学} \quad 土木工程 \quad 本科}{2019年 -- 2020年}
 \dateditem{\textbf{华中科技大学} \quad 软件工程 \quad 本科}{2020年 --  在读\quad}
-成绩：年级前15\%(13|84) \quad GPA 3.9 \quad 英语：CET6
+成绩：年级前15\%(10|84) \quad 综合成绩 90.51 \quad 英语：CET6
 
 
 % ----------------------------------------------------------------------------- %
 
 \section{专业技能}
 \smallskip
-C/C++、Python、Java、算法与数据结构、Linux、Ray、Pytorch、Tensorflow、集群并行训练,ColossalAI
+C/C++、Python、Java、算法与数据结构、Linux、Ray、Pytorch、Tensorflow、集群并行训练,ColossalAI,CUDA
 
 
 % ----------------------------------------------------------------------------- %
@@ -56,23 +56,23 @@ C/C++、Python、Java、算法与数据结构、Linux、Ray、Pytorch、Tensorfl
   \item 组合不同的并行策略(DP,PP,TP,ZERO)，收敛策略(Curriculum Learning,Post Norm,Warm Up)，并行框架使收敛时间和训练时间尽可能短，8 V100卡 4.7B GPT2大语言模型半小时左右收敛
 \end{itemize}
 % ---
-\datedproject{单目标追踪项目}{科研项目}{2022年03月 -- 2022年05月}
-\textit{pytorch、单目标跟踪，\textbf{MM2022-->AAAI2023}}
+\datedproject{单目标追踪项目}{科研项目}{2022年03月 -- 2022年08月}
+\textit{pytorch、单目标跟踪，\textbf{AAAI2023}}
 \vspace{0.4ex}
 
-在stark(ResNet+Transformer)基础上提出了使用高质量模板库中出现过的的相似模板(K-means)更新目标模板提升跟踪器在当前帧的目标跟踪能力，可以很好的提高跟踪器在目标外观剧烈形变场景下的跟踪能力，增加了掩码(MASK)，模板验证(TAB)等结构，\textbf{在TrackingNet上的测试排行榜结果仅次于MixFormer}(MM-->AAAI)
+在MixFormer基础上提出了不使用MAM模块的普通VIT注意力结构的新更踪器,在MAE decoder的训练下表现SOTA，即插即用的decoder可以很好的提高单目标跟踪器的效果，accpeted by AAAI2023 \textbf{在TrackingNet,LaSOT,UAV,GOT10k数据集上都超过了 CVPR2022 oral Mixformer}
 % ---
-% \datedproject{多目标追踪项目}{科研项目}{2021年09月 -- 2022年03月}
-% \textit{pytorch、多目标追踪及其攻防}
+% \datedproject{多目标追踪项目}{科研项目}{2021年09月 -- present}
+% \textit{pytorch、多目标追踪}
 % \vspace{0.4ex}
 
-% 针对FairMOT(CenterNet+kalman filter+KM),ByteTracker(YOLO+kalman filter+KM)做对抗样本训练(Adversarial Training)增强追踪器的鲁棒性，改进其后处理方法以提高多目标运动场景的追踪精度和防御能力，防御能力和运行场景下的追踪效果均有提升
+% 针对FairMOT(CenterNet+kalman filter+KM),ByteTracker(YOLO+kalman filter+KM)做对抗样本训练(Adversarial Training)增强追踪器的鲁棒性，改进其后处理方法以提高多目标运动场景的追踪精度和防御能力，防御能力和运行场景下的追踪效果均有提升,为ICCV2023构建了一个全新的跟踪器
 % ---
-\datedproject{HyaDIS弹性调度}{实习项目}{2022年07月 -- present}
+\datedproject{HyaDIS弹性调度}{实习项目}{2022年07月 -- 2022年10月}
 \textit{Ray,ColossalAI,异构，PP,DP}
 \vspace{0.4ex}
 
-在ColossalAI项目组开发HyaDIS弹性计算框架，实现大模型训练弹性分配资源，提升大集群资源利用率
+在潞晨科技的ColossalAI项目组开发HyaDIS弹性计算框架，实现大模型训练弹性分配资源，提升大集群资源利用率
 \begin{itemize}
   \item PP动态释放GPU的bubble的资源给其他GPU任务,根据资源的多少动态改变batch size,资源紧张动态启用offload将部分中间数据放入内存中动态适应模型的训练。提升集群的整体使用效率。(Ray,PP,DP,TP,ZERO)
 \end{itemize}
