@@ -1,0 +1,89 @@
+\documentclass{uniquecv}
+
+\usepackage{fontawesome}
+
+% ----------------------------------------------------------------------------- %
+
+\begin{document}
+
+\name{罗润}
+
+\medskip
+
+\basicinfo{
+  \faPhone ~ (+86) 191-7925-8153
+  \textperiodcentered\
+  \faEnvelope ~ lr\_8823@hust.edu.cn
+  \textperiodcentered\
+  \faGithub ~ github.com/run-qiao
+}
+
+% ----------------------------------------------------------------------------- %
+
+\section{教育背景}
+\dateditem{\textbf{华中科技大学} \quad 软件工程 \quad 本科}{2019年 --  2023\quad}
+\dateditem{\textbf{中国科学院大学} \quad 电子信息 \quad 硕士}{2023年 -- 至今}
+成绩：年级前15\%(10|84) \quad 综合成绩 90.51 \quad 英语：CET6
+
+
+% ----------------------------------------------------------------------------- %
+
+\section{专业技能}
+\smallskip
+C/C++、Python、Java、算法与数据结构、Linux、Ray、Pytorch、Tensorflow、集群并行训练,并行训练框架(Magetron,Deepspeed,ColossalAI),CUDA
+
+
+% ----------------------------------------------------------------------------- %
+
+\section{获奖情况}
+\datedaward{二等奖}{\textbf{ASC2022}}{2022年3月}
+\datedaward{国三等奖}{软件杯} {2022年7月}
+\datedaward{\small{二等奖}}{数学竞赛}{2021年11月}
+\datedaward{\small{H奖}}{美国大学生数学竞赛} {2022年5月}
+\medskip
+
+% ----------------------------------------------------------------------------- %
+
+\section{项目经历}
+
+% ---
+\datedproject{ASC2022亚洲超级计算机竞赛项目}{竞赛项目}{2022年01月 -- 2022年03月}
+\textit{大语言模型，集群性能优化、并行计算训练}
+\vspace{0.4ex}
+
+优化大语言模型在多机多卡集群环境的训练速度，使用不同的加速训练和收敛策略
+\begin{itemize}
+  \item 组合不同的并行策略(DP,PP,TP,ZERO)，收敛策略(Curriculum Learning,Post Norm,Warm Up)，并行框架使收敛时间和训练时间尽可能短，使用8卡V100将4.7BGPT2大语言模型在100GB中文语料数据集上训练收敛
+\end{itemize}
+% ---
+\datedproject{单目标追踪项目}{科研项目}{2022年03月 -- 2022年08月}
+\textit{pytorch、单目标跟踪，\textbf{AAAI2023 oral}}
+\vspace{0.4ex}
+
+提出了不使用MAM模块的普通VIT注意力结构的新更踪器,在MAE decoder的训练下表现SOTA，即插即用的decoder可以很好的提高单目标跟踪器的效果，accpeted by AAAI2023(oral) 
+\textbf{Song, Zikai and Luo, Run and Yu, Junqing and Chen, Yi-Ping Phoebe and Yang, Wei,Compact Transformer Tracker with Correlative Masked Modeling,Proceedings of the AAAI Conference on Artificial Intelligence (AAAI),February,2023}
+% ---
+\datedproject{多目标追踪项目}{科研项目}{2021年09月 -- 2023年05月}
+\textit{pytorch、多目标追踪}
+\vspace{0.4ex}
+
+将基于像素跟踪的光流思想引入多目标跟踪领域，提出了基于目标级的光流跟踪器FlowMOT大幅度提升了端到端跟踪器在经典数据集上的跟踪效果(ICCV2023在投)。
+将diffusion model的去噪思想引入多目标跟踪领域，提出了基于跟踪关系去噪的全新多目标跟踪范式，通过去噪跟踪的方式大幅度提升了模型的在各种复杂噪声场景下的跟踪效果，具有很好的抗噪能力且可以根据场景的复杂程度选择合适的去噪采样步数来达到速度和效果的trade-off(NIPS2023在投)。
+% ---
+\datedproject{HyaDIS弹性调度}{实习项目}{2022年07月 -- 2022年10月}
+\textit{Ray,ColossalAI,异构,PP,DP,TP,ZERO}
+\vspace{0.4ex}
+
+在潞晨科技的ColossalAI项目组开发HyaDIS弹性计算框架，实现大模型训练弹性分配资源，提升大集群资源利用率
+\begin{itemize}
+  \item PP动态释放GPU的bubble的资源给其他GPU任务,根据资源的多少动态改变batch size,资源紧张动态启用offload将部分中间数据放入内存中动态适应模型的训练，提升集群的整体使用效率。
+ \item DP动态监测集群GPU的资源,根据资源的多少动态调整GPU占用数量,提升集群的整体使用效率。
+\end{itemize}
+% ----------------------------------------------------------------------------- %
+\section{课外}
+\dateditem{\textbf{华中科技大学联创团队AI组}}{2021年04月 -- 2023年06月}
+\dateditem{\textbf{华中科技大学科创团队AI组组长}}{2021年08月 -- 2023年05月}
+\dateditem{\textbf{华中科技大学七边形超算队}}{2021年12月 -- 至今}
+\dateditem{\textbf{华中科技大学计算机学院智能媒体计算与网络安全实验室}}{2022年06月 -- 至今}
+\dateditem{\textbf{中科院深圳先进院高性能数据挖掘重点实验室}}{2023年06月 -- 至今}
+\end{document}
